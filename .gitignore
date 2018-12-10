@@ -11,7 +11,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+# build/
 develop-eggs/
 dist/
 downloads/
@@ -110,10 +110,14 @@ venv.bak/
 *.log
 *.pot
 *.pyc
+**/*.pyc
 __pycache__/
 local_settings.py
 db.sqlite3
 media
+
+# Javascript stuffs
+node_modules/
 
 # Visual Studio CODE folder
 .vscode
