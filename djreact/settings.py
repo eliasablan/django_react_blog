@@ -13,7 +13,7 @@ SECRET_KEY = 'yzbm+gn=q=^#8t+e_61y!36ojun&mwkdf+a3dj&prf(w8wq9^f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eae-react-django-app.herokuapp.com']
+ALLOWED_HOSTS = ['eae-react-django-app.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -131,9 +131,8 @@ STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permission,
     # or allow read-only acces for unauthorized users.
-    'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
-        # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication'
     ]
 }
 
